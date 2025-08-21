@@ -1,0 +1,33 @@
+<!-- public/logo-floral.svg -->
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Agrícola BE">
+  <defs>
+    <style>
+      .s{ stroke: var(--be-green, #0c3b2a); stroke-width: 16; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <g transform="translate(256,256)">
+    <!-- pétalo base -->
+    <path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/>
+    <!-- repetir 12 veces -->
+    <g transform="rotate(30)"><use href="#p"/></g>
+  </g>
+
+  <!-- fallback si algunos navegadores no soportan <use href> con ids inline -->
+  <g id="p" transform="translate(256,256)">
+    <path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/>
+  </g>
+  <g transform="translate(256,256)">
+    <g transform="rotate(30)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(60)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(90)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(120)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(150)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(180)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(210)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(240)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(270)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(300)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <g transform="rotate(330)"><path class="s" d="M0,-170 C-35,-120 -28,-70 0,-30 C28,-70 35,-120 0,-170 Z"/></g>
+    <circle class="s" r="20"/>
+  </g>
+</svg>
