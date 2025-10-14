@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import About from "@/components/About/About";
 import Products from "@/components/Products";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,9 +15,12 @@ export default function Home() {
       {/* Contenido principal */}
       <main className="flex-1">
         <Hero />
-        <About />
         <Products />
-        <Testimonials />
+        <About />
+      
+        <Contact />
+
+        
       </main>
 
       {/* Footer */}
