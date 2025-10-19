@@ -24,21 +24,89 @@ type Product = {
 
 // Example product dataset (replace or fetch from your API)
 const SAMPLE_PRODUCTS: Product[] = [
-  { id: "p1", name: "Tomate Heirloom", description: "Tomates maduros, sabor intenso.", image: "/products/tomate.jpg", inSeason: true, createdAt: "2025-08-01" },
-  { id: "p2", name: "Zanahoria Baby", description: "Dulce y crujiente, ideal para ensaladas.", image: "/products/zanahoria.jpg", inSeason: true, createdAt: "2025-07-20" },
-  { id: "p3", name: "Lechuga Romana", description: "Hojas frescas y crujientes.", image: "/products/lechuga.jpg", inSeason: false, createdAt: "2025-03-15" },
-  { id: "p4", name: "Ajo Morado", description: "Ajo con aroma profundo.", image: "/products/ajo.jpg", inSeason: false, createdAt: "2024-11-05" },
-  { id: "p5", name: "Cebolla de Campo", description: "Sabor pleno para sofritos.", image: "/products/cebolla.jpg", inSeason: true, createdAt: "2025-06-10" },
-  { id: "p6", name: "Papas Andinas", description: "Variedades antiguas, textura firme.", image: "/products/papas.jpg", inSeason: true, createdAt: "2025-05-02" },
-  // more sample entries so pagination can be tested:
-  { id: "p7", name: "Albahaca Fresca", description: "Aroma intenso, perfecta para salsas.", image: "/products/albahaca.jpg", inSeason: true, createdAt: "2025-08-05" },
-  { id: "p8", name: "Rábanos", description: "Picante y crocante.", image: "/products/rabanos.jpg", inSeason: false, createdAt: "2024-10-10" },
-  { id: "p9", name: "Zapallo", description: "Pulpa dulce para guisos.", image: "/products/zapallo.jpg", inSeason: false, createdAt: "2024-09-01" },
-  { id: "p10", name: "Pimentón", description: "Colores y textura para platos.", image: "/products/pimenton.jpg", inSeason: true, createdAt: "2025-07-01" },
-  { id: "p11", name: "Espinaca", description: "Hojas tiernas para saltear.", image: "/products/espinaca.jpg", inSeason: true, createdAt: "2025-06-18" },
-  { id: "p12", name: "Betarraga", description: "Sabor terroso y color intenso.", image: "/products/betarraga.jpg", inSeason: false, createdAt: "2024-12-12" },
-  // add more to test more pages...
+  {
+    id: "prd-mix-baby-leaf",
+    name: "Mix Baby Leaf",
+    description:
+      "Mezcla de hojas tiernas: lechugas baby, espinaca baby, rúcula, acelga baby y asiáticas (mizuna, tatsoi). Texturas y sabores entre dulces, amargos y un picor agradable.",
+    image: "/products/baby-leaf.jpg",
+    inSeason: true,
+    createdAt: "2025-08-15",
+  },
+  {
+    id: "prd-espinaca-baby",
+    name: "Espinaca Baby",
+    description:
+      "Hoja pequeña y redondeada, de sabor suave y dulce. Ideal para ensaladas.",
+    image: "/products/espinaca-baby.jpeg",
+    inSeason: true,
+    createdAt: "2025-08-10",
+  },
+  {
+    id: "prd-salanova-crispy-verde",
+    name: "Lechuga Salanova Crispy (Verde)",
+    description:
+      "Versión crujiente de Salanova: firme y muy crocante.",
+    image: "/products/lechuga-crispy-verde.jpeg",
+    inSeason: true,
+    createdAt: "2025-08-08",
+  },
+  {
+    id: "prd-salanova-lisa",
+    name: "Lechuga Salanova Lisa",
+    description:
+      "Lechuga suave y mantecosa en su versión lisa. (Mostrando foto temporal de Crispy verde hasta tener imagen propia).",
+    image: "/products/lechugasalanovalisa.png", // placeholder
+    inSeason: true,
+    createdAt: "2025-08-07",
+  },
+  {
+    id: "prd-espanola-verde",
+    name: "Lechuga Española (Verde)",
+    description:
+      "Hojas alargadas, crujientes y de color verde brillante, con nervio central prominente. Sabor fresco y ligeramente dulce.",
+    image: "/products/lechuga-española-verde.jpeg",
+    inSeason: true,
+    createdAt: "2025-08-05",
+  },
+  {
+    id: "prd-espanola-roja",
+    name: "Lechuga Española (Roja)",
+    description:
+      "Variante rojiza de la Española, crujiente y fresca con notas ligeramente dulces.",
+    image: "/products/lechuga-española-roja.jpeg",
+    inSeason: true,
+    createdAt: "2025-08-04",
+  },
+  {
+    id: "prd-roble-verde",
+    name: "Lechuga Roble (Verde)",
+    description:
+      "Hojas rizadas y lobuladas, textura tierna y mantecosa, sabor suave y ligeramente dulce.",
+    image: "/products/roble-verde.jpeg",
+    inSeason: true,
+    createdAt: "2025-08-03",
+  },
+  {
+    id: "prd-roble-roja",
+    name: "Lechuga Roble (Roja)",
+    description:
+      "Variante roja de Roble, con la misma textura tierna y sabor suave.",
+    image: "/products/lechuga-roble-roja.jpeg",
+    inSeason: true,
+    createdAt: "2025-08-02",
+  },
+  {
+    id: "prd-lollo-bionda",
+    name: "Lechuga Lollo Bionda",
+    description:
+      "Hojas sueltas y rizadas de verde claro, sabor suave y textura crujiente.",
+    image: "/products/lechuga-lollo-bionda.jpeg",
+    inSeason: true,
+    createdAt: "2025-08-01",
+  },
 ];
+
 
 const PAGE_SIZE = 6;
 

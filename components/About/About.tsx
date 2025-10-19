@@ -10,10 +10,10 @@ export default function About() {
         <AboutHeader
           title="Quiénes somos"
           subtitle="En Agrícola BE cultivamos con respeto por la tierra y la gente."
-          heroSrc="/aboutprincipal.jpg"
+          heroSrc="/fondos/fondo.JPEG"
           heroAlt="Campo y productores de Agrícola BE"
         />
-        <AboutValues />
+        
         <TeamGallery />
         <AboutCTA />
       </div>
