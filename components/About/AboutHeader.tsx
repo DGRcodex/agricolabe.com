@@ -29,8 +29,11 @@ export default function AboutHeader({ title, subtitle, heroSrc, heroAlt }: Props
         )}
 
         <p className="mt-6 max-w-2xl text-base sm:text-lg">
-          Trabajamos con prácticas regenerativas, pequeños productores locales y controles de calidad
-          que garantizan frescura y sabor.
+           Trabajamos con prácticas responsables junto a pequeños productores locales, 
+  priorizando frescura, sabor y consistencia en cada cosecha. Entre nuestras 
+  variedades encontrarás Salanova lisa y crispy, espinaca baby y mix baby leaf,
+  una mezcla de hojas tiernas como rúcula, acelga baby y asiáticas como mizuna 
+  y tatsoi. 
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3">

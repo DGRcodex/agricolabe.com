@@ -4,7 +4,7 @@
 import Image from "next/image";
 
 export default function Hero() {
-  const mandalaSrc = "/hero/mandalafloral.svg"; // cámbialo si tu archivo está en otra ruta
+  const mandalaSrc = "/hero/mandala2.svg"; // cámbialo si tu archivo está en otra ruta
 
   return (
     <section
@@ -42,12 +42,12 @@ export default function Hero() {
           </h1>
 
           <p className="font-serif mt-6 text-[22px] sm:text-[26px] md:text-[32px]">
-            Desde la Tierra. Selección viva. <br /> Calidad real.
+            Desde la Tierra.  <br /> 
           </p>
 
           <p className="max-w-2xl mt-4 text-base md:text-lg opacity-90">
-            En BE, cultivamos seleccionar alimentos con conexión honesta a la tierra y trabajo dedicadoso
-            para restaurantes, distribuidores y tiendas especializadas.
+            En Agricola BE,  seleccionamos hortalizas gourmet con excelente calidad e inocuidad, 
+  elegidas por manos expertas, para asegurar frescura, sabor y consistencia. 
           </p>
 
           <div className="flex gap-4 pt-6">

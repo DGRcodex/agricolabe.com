@@ -62,10 +62,10 @@ export default function CoopPartnerCard() {
               Cooperativa Agrícola de Lampa
             </h3>
             <p className="mt-3 text-sm sm:text-base max-w-2xl leading-relaxed text-white/95">
-              La fundadora de Agrícola BE es cooperada de la Cooperativa
-              Agrícola de Lampa. Trabajamos en conjunto por el desarrollo
-              agrícola de Lampa, fortaleciendo encadenamientos productivos y
-              motivando a futuras generaciones.
+                Agrícola BE forma parte de la 
+    Cooperativa Agrícola de Lampa. Trabajamos en conjunto por el desarrollo 
+    agrícola de la comuna, con el objetivo de fortalecer el rubro e inspirar a 
+    futuras generaciones. 
             </p>
             <p className="mt-2 text-xs sm:text-sm text-white/80">COOPAGRILAMP</p>
           </div>
