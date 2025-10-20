@@ -29,7 +29,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     name: "Mix Baby Leaf",
     description:
       "Mezcla de hojas tiernas: lechugas baby, espinaca baby, rúcula, acelga baby y asiáticas (mizuna, tatsoi). Texturas y sabores entre dulces, amargos y un picor agradable.",
-    image: "/products/baby-leaf.jpg",
+    image: "/products/mixbabyleaf.png", // existe: baby-leaf.jpg
     inSeason: true,
     createdAt: "2025-08-15",
   },
@@ -38,16 +38,15 @@ const SAMPLE_PRODUCTS: Product[] = [
     name: "Espinaca Baby",
     description:
       "Hoja pequeña y redondeada, de sabor suave y dulce. Ideal para ensaladas.",
-    image: "/products/espinaca-baby.jpeg",
+    image: "/products/espinacababy2.png", // existe: espinaca-baby.JPEG
     inSeason: true,
     createdAt: "2025-08-10",
   },
   {
     id: "prd-salanova-crispy-verde",
     name: "Lechuga Salanova Crispy (Verde)",
-    description:
-      "Versión crujiente de Salanova: firme y muy crocante.",
-    image: "/products/lechuga-crispy-verde.jpeg",
+    description: "Versión crujiente de Salanova: firme y muy crocante.",
+    image: "/products/LECHUGA-CRISPY-VERDE.JPEG", // existe: LECHUGA-CRISPY-VERDE.JPEG
     inSeason: true,
     createdAt: "2025-08-08",
   },
@@ -55,8 +54,8 @@ const SAMPLE_PRODUCTS: Product[] = [
     id: "prd-salanova-lisa",
     name: "Lechuga Salanova Lisa",
     description:
-      "Lechuga suave y mantecosa en su versión lisa. (Mostrando foto temporal de Crispy verde hasta tener imagen propia).",
-    image: "/products/lechugasalanovalisa.png", // placeholder
+      "Lechuga suave y mantecosa en su versión lisa.",
+    image: "/products/lechugasalanovalisa.png", // existe: lechugasalanovalisa.png
     inSeason: true,
     createdAt: "2025-08-07",
   },
@@ -65,7 +64,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     name: "Lechuga Española (Verde)",
     description:
       "Hojas alargadas, crujientes y de color verde brillante, con nervio central prominente. Sabor fresco y ligeramente dulce.",
-    image: "/products/lechuga-española-verde.jpeg",
+    image: "/products/LECHUGA-ESPANOLA-VERDE.JPEG", // existe: LECHUGA-ESPANOLA-VERDE.JPEG
     inSeason: true,
     createdAt: "2025-08-05",
   },
@@ -74,7 +73,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     name: "Lechuga Española (Roja)",
     description:
       "Variante rojiza de la Española, crujiente y fresca con notas ligeramente dulces.",
-    image: "/products/lechuga-española-roja.jpeg",
+    image: "/products/LECHUGA-ESPANOLA-ROJA.JPEG", // existe: LECHUGA-ESPANOLA-ROJA.JPEG
     inSeason: true,
     createdAt: "2025-08-04",
   },
@@ -83,7 +82,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     name: "Lechuga Roble (Verde)",
     description:
       "Hojas rizadas y lobuladas, textura tierna y mantecosa, sabor suave y ligeramente dulce.",
-    image: "/products/roble-verde.jpeg",
+    image: "/products/roble-verde.JPEG", // existe: roble-verde.JPEG
     inSeason: true,
     createdAt: "2025-08-03",
   },
@@ -92,7 +91,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     name: "Lechuga Roble (Roja)",
     description:
       "Variante roja de Roble, con la misma textura tierna y sabor suave.",
-    image: "/products/lechuga-roble-roja.jpeg",
+    image: "/products/roble-roja.JPEG", // existe: roble-roja.JPEG
     inSeason: true,
     createdAt: "2025-08-02",
   },
@@ -101,11 +100,12 @@ const SAMPLE_PRODUCTS: Product[] = [
     name: "Lechuga Lollo Bionda",
     description:
       "Hojas sueltas y rizadas de verde claro, sabor suave y textura crujiente.",
-    image: "/products/lechuga-lollo-bionda.jpeg",
+    image: "/products/LECHUGA-LOLLO-BIONDA.JPEG", // existe: LECHUGA-LOLLO-BIONDA.JPEG
     inSeason: true,
     createdAt: "2025-08-01",
   },
 ];
+
 
 
 const PAGE_SIZE = 6;
