@@ -9,13 +9,24 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-end gap-2">
           <ul className="flex gap-6">
    
-            <li><a href="#" className="hover:text-green-400">Instagram</a></li>
-            <li><a href="#" className="hover:text-green-400">LinkedIn</a></li>
+            <li>
+              <a href="#" className="hover:text-green-400">Instagram</a>
+            </li>
+            <li>
+              <a 
+                href="https://www.linkedin.com/in/daniela-apablaza-avila-a7941015b/" 
+                target="_blank" // ESTO abre el enlace en una nueva pestaña
+                rel="noopener noreferrer" // ESTO es una práctica de seguridad recomendada
+                className="hover:text-green-400"
+              >
+                LinkedIn
+              </a>
+            </li>
           </ul>
           <p className="text-sm">
             Hecho por{" "}
             <a
-              href="https://dgrcodex.me"
+              href="https://github.com/dgrcodex"
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-400 hover:text-green-300"

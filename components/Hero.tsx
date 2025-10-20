@@ -1,33 +1,28 @@
-// components/Hero.tsx
 "use client";
 
 import Image from "next/image";
 
 export default function Hero() {
-  const mandalaSrc = "/hero/mandala2.svg"; // cámbialo si tu archivo está en otra ruta
+  const mandalaSrc = "/hero/mandala2.svg";
 
   return (
     <section
+      id="inicio"
       className="relative overflow-hidden"
       style={{ backgroundColor: "var(--background)", color: "var(--foreground)" }}
     >
       <div className="mx-auto max-w-7xl px-6 py-16 grid items-center gap-8 md:grid-cols-12">
-        {/* Mandala a la izquierda, más grande */}
+        {/* Mandala */}
         <div className="md:col-span-6 flex justify-start">
           <Image
             src={mandalaSrc}
-            alt=""                // decorativo
+            alt=""
             aria-hidden="true"
             width={900}
             height={900}
             priority
-            className="
-              w-[60vw] sm:w-[52vw] md:w-[44vw] lg:w-[40vw]
-              max-w-[760px] md:max-w-[680px] lg:max-w-[740px]
-              h-auto -ml-10 sm:-ml-12 md:-ml-16
-            "
+            className="w-[60vw] sm:w-[52vw] md:w-[44vw] lg:w-[40vw] max-w-[760px] md:max-w-[680px] lg:max-w-[740px] h-auto -ml-10 sm:-ml-12 md:-ml-16"
           />
-          {/* IMPORTANTE: Eliminamos cualquier overlay/aro detrás */}
         </div>
 
         {/* Texto */}
@@ -42,12 +37,12 @@ export default function Hero() {
           </h1>
 
           <p className="font-serif mt-6 text-[22px] sm:text-[26px] md:text-[32px]">
-            Desde la Tierra.  <br /> 
+            Desde la Tierra.
           </p>
 
           <p className="max-w-2xl mt-4 text-base md:text-lg opacity-90">
-            En Agricola BE,  seleccionamos hortalizas gourmet con excelente calidad e inocuidad, 
-  elegidas por manos expertas, para asegurar frescura, sabor y consistencia. 
+            En Agrícola BE, seleccionamos hortalizas gourmet con excelente calidad e inocuidad,
+            elegidas por manos expertas, para asegurar frescura, sabor y consistencia.
           </p>
 
           <div className="flex gap-4 pt-6">
