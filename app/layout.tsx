@@ -2,21 +2,22 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+});
 
-export const viewport: Viewport = {
-  themeColor: "#234b3f",
-};
+export const viewport: Viewport = { themeColor: "#234b3f" };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://agricolabe.com"),
-  title: {
-    default: "Agrícola BE — Desde la Tierra",
-    template: "%s | Agrícola BE",
-  },
+  title: { default: "Agrícola BE — Desde la Tierra", template: "%s | Agrícola BE" },
   description: "Productos frescos y colaboraciones agrícolas. Desde la Tierra.",
   applicationName: "Agrícola BE",
   authors: [{ name: "dgrcodex", url: "https://dgrcodex.me" }],
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon.ico" }, // multi-res
+      { url: "/favicon.ico" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
     ],
@@ -47,26 +48,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-dvh flex flex-col">
-          <main className="flex-1">{children}</main>
-          
+    <html lang="es" className="display-playfair">
+      <body className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}>
+        {/* WRAPPER EXTERNO: controla altura/scroll general */}
+        <div id="site-scale" className="min-h-dvh flex flex-col">
+          {/* WRAPPER INTERNO: es el ÚNICO que se escala (no controla altura) */}
+          <div className="scale-viewport flex-1 flex flex-col">
+            <main className="flex-1 min-h-0">{children}</main>
+            {/* Si el Footer se renderiza por página, no lo dupliques aquí */}
+          </div>
+          <SeoJsonLd />
         </div>
-        <SeoJsonLd />
       </body>
     </html>
   );
 }
 
-/** Footer minimal y elegante con enlaces de autor y powered by */
-
-
-/** JSON-LD para SEO (Organization + Website) */
+/** JSON-LD */
 function SeoJsonLd() {
   const org = {
     "@context": "https://schema.org",
@@ -75,11 +75,7 @@ function SeoJsonLd() {
     url: "https://agricolabe.com",
     slogan: "Desde la Tierra",
     logo: "https://agricolabe.com/favicon-512.png",
-    sameAs: [
-      "https://github.com/dgrcodex",
-      "https://sambalab.pro",
-      "https://dgrcodex.me",
-    ],
+    sameAs: ["https://github.com/dgrcodex", "https://sambalab.pro", "https://dgrcodex.me"],
   };
   const website = {
     "@context": "https://schema.org",
@@ -94,14 +90,8 @@ function SeoJsonLd() {
   };
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }} />
     </>
   );
 }

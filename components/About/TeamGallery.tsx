@@ -1,14 +1,6 @@
 // components/about/CoopPartnerCard.tsx
 "use client";
 
-/**
- * Card de aliado: Cooperativa Agrícola de Lampa
- * - Incluye separador superior integrado para dar respiro entre secciones.
- * - Logo fijo desde /public/about/logocooperativa.jpeg.
- * - Fondo opcional (puedes activar uno real si lo subes a /public/about/fondo-campo.jpg).
- * - Accesible y responsivo.
- */
-
 import Image from "next/image";
 
 export default function CoopPartnerCard() {
@@ -19,9 +11,9 @@ export default function CoopPartnerCard() {
 
       <section
         aria-label="Alianza con Cooperativa Agrícola de Lampa"
-        className="relative isolate overflow-hidden rounded-2xl border border-white/10 mt-12 sm:mt-16 lg:mt-24 scroll-mt-28"
+        className="relative isolate overflow-hidden rounded-2xl border border-white/10 mt-12 sm:mt-16 lg:mt-24 scroll-mt-28 md:min-h-[360px]"
       >
-        {/* Fondo opcional — si tienes una foto de campo en /public/about/fondo-campo.jpg, descomenta las siguientes líneas */}
+        {/* Fondo */}
         {false ? (
           <div className="absolute inset-0 -z-10">
             <Image
@@ -38,7 +30,23 @@ export default function CoopPartnerCard() {
           <div className="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-800" />
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-6 p-6 sm:p-8">
+        {/* Imagen derecha (solo desktop), ocupa el espacio verde */}
+        <div className="hidden md:block absolute right-6 top-1/2 -translate-y-1/2 w-[38%] h-[calc(100%-3rem)]">
+          <div className="relative h-full rounded-xl overflow-hidden shadow-sm ring-1 ring-black/10">
+            <Image
+              src="/about/cooperativa.jpeg"
+              alt="Cooperativa Agrícola de Lampa"
+              fill
+              sizes="33vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Contenido original (sin cambios en estructura). 
+           Solo agrego padding-right en md+ para no chocar con la imagen absoluta */}
+        <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-6 p-6 sm:p-8 md:pr-[calc(38%+1.5rem)]">
           {/* Logo con plaquita blanca */}
           <figure className="mx-auto md:mx-0 w-40 sm:w-48">
             <div className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-black/5">
@@ -62,12 +70,26 @@ export default function CoopPartnerCard() {
               Cooperativa Agrícola de Lampa
             </h3>
             <p className="mt-3 text-sm sm:text-base max-w-2xl leading-relaxed text-white/95">
-                Agrícola BE forma parte de la 
-    Cooperativa Agrícola de Lampa. Trabajamos en conjunto por el desarrollo 
-    agrícola de la comuna, con el objetivo de fortalecer el rubro e inspirar a 
-    futuras generaciones. 
+              Agrícola BE forma parte de la 
+              Cooperativa Agrícola de Lampa. Trabajamos en conjunto por el desarrollo 
+              agrícola de la comuna, con el objetivo de fortalecer el rubro e inspirar a 
+              futuras generaciones. 
             </p>
             <p className="mt-2 text-xs sm:text-sm text-white/80">COOPAGRILAMP</p>
+
+            {/* Imagen en mobile: debajo del texto */}
+            <div className="md:hidden mt-4">
+              <div className="relative w-full h-56 sm:h-64 rounded-xl overflow-hidden">
+                <Image
+                  src="/about/cooperativa.jpeg"
+                  alt="Cooperativa Agrícola de Lampa"
+                  fill
+                  sizes="100vw"
+                  style={{ objectFit: "cover" }}
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

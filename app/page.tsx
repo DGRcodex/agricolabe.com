@@ -8,23 +8,19 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div className="font-sans bg-background text-foreground min-h-screen flex flex-col">
-      {/* Navbar */}
+    <>
       <Navbar />
 
-      {/* Contenido principal */}
-      <main className="flex-1">
+      {/* Contenido principal: sin min-h-screen; usa min-h-0 para no “empujar” */}
+      <main className="flex-1 min-h-0">
         <Hero />
         <Products />
         <About />
-      
+        {/* <Testimonials /> si lo necesitas */}
         <Contact />
-
-        
       </main>
 
-      {/* Footer */}
       <Footer />
-    </div>
+    </>
   );
 }
