@@ -90,7 +90,7 @@ const SAMPLE_PRODUCTS: Product[] = [
    name: "Lechuga Lollo Bionda",
    description:
      "Hojas sueltas y rizadas de verde claro, sabor suave y textura crujiente.",
-   image: "/products/LECHUGA-LOLLO-BIONDA.JPEG", // existe: LECHUGA-LOLLO-BIONDA.JPEG
+   image: "/products/LECHUGA-LOLLo-BIONDA.JPEG", // existe: LECHUGA-LOLLO-BIONDA.JPEG
    inSeason: true,
    createdAt: "2025-08-01",
  },
